@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Poppins&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        font-family: 'Poppins', sans-serif;
+    }
+    body {
+        @apply bg-gradient-to-r from-[#fdfbfb] to-[#e2ebf0];
+    }
+}
