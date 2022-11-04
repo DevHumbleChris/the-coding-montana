@@ -24,9 +24,9 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="grid sm:grid-cols-2 items-center">
+        <div className="grid mx-auto lg:grid-cols-2 items-center">
           <ProfileHolder />
-          <div className="max-w-xl flex flex-col">
+          <div className="max-w-xl mx-auto flex flex-col">
             <p className="text-body-color mb-3 text-base leading-relaxed">
               I started a serious coding journey almost exactly a year ago. I
               love combining the worlds of logic and creative design to make
@@ -57,6 +57,7 @@ export default function About() {
               the right company. If you are looking for a developer to add to
               your team, I would love to hear from you!
             </p>
+            <h1 className="text-center my-2 text-body-color text-base leading-relaxed">Don&apos;t be a stranger connect with me online.</h1>
             <div className="flex items-center justify-center space-x-6 my-2">
               <Link href="https://github.com/DevHumbleChris">
                 <a className="cursor-pointer">
@@ -91,7 +92,7 @@ export default function About() {
               </Link>
               <Link href="https://twitter.com/AmChrisKE?t=CuF7ruFOTdF03j7AzVpOgw&s=09">
                 <a className="cursor-pointer">
-                <svg
+                  <svg
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
@@ -121,11 +122,12 @@ export default function About() {
               </Link>
               <Link href="https://wa.me/message/BSLLTZE6NKUIF1">
                 <a className="cursor-pointer">
-                <svg
+                  <svg
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
                     y="0px"
-                    width="96" height="96"
+                    width="96"
+                    height="96"
                     viewBox="0 0 48 48"
                     className="w-10 h-10"
                     style={{ fill: "#000000" }}
