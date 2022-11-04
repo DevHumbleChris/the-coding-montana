@@ -4,25 +4,16 @@ import ProfileHolder from "./ProfileHolder";
 
 export default function About() {
   return (
-    <section className="">
+    <section id="about">
       <div className="container mx-auto">
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4">
-            <div className="mx-auto max-w-[510px] text-center">
-              <span className="text-primary mb-2 block text-base font-semibold uppercase">
-                Captain! fun fact about me.
-              </span>
-              <h1 className="text-dark mb-2 text-[32px] font-bold sm:text-[40px] lg:text-[36px] xl:text-[40px]">
-                <Typewriter
-                  options={{
-                    strings: ["About Me."],
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-              </h1>
-            </div>
-          </div>
+        <div>
+          <h3 className="text-primary mb-2 text-base font-semibold uppercase flex items-center">
+            Some info
+            <span className="bg-body-color ml-2 inline-block h-[1px] w-8"></span>
+          </h3>
+          <h1 className="capitalize text-2xl font-bold text-primary">
+            About Me
+          </h1>
         </div>
         <div className="grid mx-auto lg:grid-cols-2 items-center">
           <ProfileHolder />
@@ -57,7 +48,9 @@ export default function About() {
               the right company. If you are looking for a developer to add to
               your team, I would love to hear from you!
             </p>
-            <h1 className="text-center my-2 text-body-color text-base leading-relaxed">Don&apos;t be a stranger connect with me online.</h1>
+            <h1 className="text-center my-2 text-body-color text-base leading-relaxed">
+              Don&apos;t be a stranger connect with me online.
+            </h1>
             <div className="flex items-center justify-center space-x-6 my-2">
               <Link href="https://github.com/DevHumbleChris">
                 <a className="cursor-pointer">

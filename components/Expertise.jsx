@@ -8,7 +8,10 @@ import {
 
 export default function Expertise() {
   return (
-    <section className="container text-body-color text-base leading-relaxed my-5">
+    <section
+      id="expertise"
+      className="container text-body-color text-base leading-relaxed my-5"
+    >
       <div className="md:grid md:grid-cols-2 items-center">
         <div>
           <h3 className="text-primary mb-2 text-base font-semibold uppercase flex items-center">
