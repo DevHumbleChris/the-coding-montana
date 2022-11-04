@@ -1,6 +1,6 @@
 import Head from "next/head";
 import About from "../../components/About";
-import Benefits from "../../components/Benefits";
+import Expertise from "../../components/Expertise";
 import Hero from "../../components/Hero";
 import Navbar from "../../components/Navbar";
 
@@ -15,7 +15,7 @@ export default function Portfolio() {
       <Navbar />
       <Hero />
       <About />
-      <Benefits />
+      <Expertise />
     </main>
   );
 }
