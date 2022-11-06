@@ -1,7 +1,7 @@
 import Head from "next/head";
 import AdminHeader from "../../components/AdminHeader";
 
-export default function index() {
+export default function Admin() {
   return (
     <div>
       <Head>
