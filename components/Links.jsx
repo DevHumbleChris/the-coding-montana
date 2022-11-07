@@ -88,8 +88,8 @@ export default function Links() {
                       y2="38.769"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop offset="0" stop-color="#2aa4f4"></stop>
-                      <stop offset="1" stop-color="#007ad9"></stop>
+                      <stop offset="0" stopColor="#2aa4f4"></stop>
+                      <stop offset="1" stopColor="#007ad9"></stop>
                     </linearGradient>
                     <path
                       fill="url(#_osn9zIN2f6RhTsY8WhY4a_5MQ0gPAYYx7a_gr1)"
