@@ -33,6 +33,7 @@ export default function Admin() {
   ];
   const router = useRouter();
   const currentPath = router.query.routes;
+  const [singleComponent, setSingleComponent] = useState(null)
   const findSlugMatchingComponent = () => {
     components.find((cmp) => cmp.slug === currentPath);
   };
@@ -41,19 +42,20 @@ export default function Admin() {
     const foundComponent = components.find((cmp) => cmp.slug === currentPath);
     if (currentPath && !foundComponent) {
       router.push("/404");
+    } else {
+        setSingleComponent(foundComponent)
     }
   }, [router]);
-  const cmp = components.find((cmp) => cmp.slug === currentPath)
   return (
     <div>
       <Head>
-        <title>Admin {cmp.label} - The Coding Montana</title>
+        <title>Admin {singleComponent.label} - The Coding Montana</title>
         <meta name="description" content="The Coding Montana - Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="grid grid-cols-9">
         <AdminHeader />
-        <div>{cmp.component}</div>
+        <div>{singleComponent.component}</div>
       </main>
     </div>
   );
