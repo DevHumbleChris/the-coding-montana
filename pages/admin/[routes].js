@@ -43,18 +43,17 @@ export default function Admin() {
       router.push("/404");
     }
   }, [router]);
-  const cmp = components.find((cmp) => cmp.slug === currentPath).component;
-  console.log(cmp);
+  const cmp = components.find((cmp) => cmp.slug === currentPath)
   return (
     <div>
       <Head>
-        <title>Admin Area - The Coding Montana</title>
+        <title>Admin {cmp.label} - The Coding Montana</title>
         <meta name="description" content="The Coding Montana - Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="grid grid-cols-9">
         <AdminHeader />
-        <div>{cmp}</div>
+        <div>{cmp.component}</div>
       </main>
     </div>
   );
