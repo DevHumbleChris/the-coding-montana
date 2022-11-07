@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import Projects from "../../components/Projects";
 import Articles from "../../components/Articles";
 import Tasks from "../../components/Tasks";
+import { getSession } from "next-auth/react";
 
 export default function Admin() {
   const components = [
@@ -54,4 +55,19 @@ export default function Admin() {
       </main>
     </div>
   );
+}
+
+
+export const getServerSideProps = async (ctx) => {
+  const session = await getSession(ctx)
+  if (!session) return {
+    redirect: {
+      destination: '/admin/auth/signin'
+    }
+  }
+  return {
+    props: {
+      session
+    }
+  }
 }

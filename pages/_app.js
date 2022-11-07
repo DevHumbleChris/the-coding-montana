@@ -2,13 +2,16 @@ import "../styles/globals.css";
 import Layout from "../components/Layout";
 import { store } from "../store";
 import { Provider } from "react-redux";
+import { SessionProvider } from 'next-auth/react'
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, session, pageProps }) {
   return (
     <Layout>
-      <Provider store={store}>
-        <Component {...pageProps} />
-      </Provider>
+      <SessionProvider session={session}>
+        <Provider store={store}>
+          <Component {...pageProps} />
+        </Provider>
+      </SessionProvider>
     </Layout>
   );
 }
