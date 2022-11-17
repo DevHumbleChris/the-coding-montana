@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { motion } from "framer-motion";
 import ProfileHolder from "./ProfileHolder";
 
 export default function About() {
@@ -7,45 +6,25 @@ export default function About() {
     <section id="about">
       <div className="container mx-auto">
         <div>
-          <motion.h3
-            initial={{ x: -500, opacity: 0, scale: 1.5 }}
-            whileInView={{ x: 0, opacity: 1, scale: 1 }}
-            transition={{ duration: 1.0 }}
-            className="text-primary mb-2 text-base font-semibold uppercase flex items-center"
-          >
+          <h3 className="text-primary mb-2 text-base font-semibold uppercase flex items-center">
             Some info
             <span className="bg-body-color ml-2 inline-block h-[1px] w-8"></span>
-          </motion.h3>
-          <motion.h1
-            initial={{ x: -500, opacity: 0, scale: 1.5 }}
-            whileInView={{ x: 0, opacity: 1, scale: 1 }}
-            transition={{ duration: 1.0 }}
-            className="capitalize text-2xl font-bold text-primary"
-          >
+          </h3>
+          <h1 className="capitalize text-2xl font-bold text-primary">
             About Me
-          </motion.h1>
+          </h1>
         </div>
         <div className="grid mx-auto lg:grid-cols-2 items-center">
           <ProfileHolder />
           <div className="max-w-xl mx-auto flex flex-col">
-            <motion.p
-              initial={{ x: 500, opacity: 0, scale: 1.5 }}
-              whileInView={{ x: 0, opacity: 1, scale: 1 }}
-              transition={{ duration: 1.2 }}
-              className="text-body-color mb-3 text-base leading-relaxed"
-            >
+            <p className="text-body-color mb-3 text-base leading-relaxed">
               I started a serious coding journey almost exactly a year ago. I
               love combining the worlds of logic and creative design to make
               eye-catching, accessible, user-friendly websites and applications.
               I offer both design and development services of web applications
               or websites!
-            </motion.p>
-            <motion.p
-              initial={{ x: 500, opacity: 0, scale: 1.5 }}
-              whileInView={{ x: 0, opacity: 1, scale: 1 }}
-              transition={{ duration: 1.4 }}
-              className="text-body-color mb-3 text-base leading-relaxed"
-            >
+            </p>
+            <p className="text-body-color mb-3 text-base leading-relaxed">
               <span>
                 Basically, am a web developer with a focus, love and passion for
                 the JavaScript langauge with all its related stack. Most of the
@@ -62,31 +41,16 @@ export default function About() {
                 stack, but am still exploring other technologies and frameworks
                 that catch my interest!
               </span>
-            </motion.p>
-            <motion.p
-              initial={{ x: 500, opacity: 0, scale: 1.5 }}
-              whileInView={{ x: 0, opacity: 1, scale: 1 }}
-              transition={{ duration: 1.6 }}
-              className="text-body-color mb-3 text-base leading-relaxed"
-            >
+            </p>
+            <p className="text-body-color mb-3 text-base leading-relaxed">
               I am excited to make the leap and continue refining my skills with
               the right company. If you are looking for a developer to add to
               your team, I would love to hear from you!
-            </motion.p>
-            <motion.h1
-              initial={{ x: 500, opacity: 0, scale: 1.5 }}
-              whileInView={{ x: 0, opacity: 1, scale: 1 }}
-              transition={{ duration: 1.8 }}
-              className="text-center my-2 text-body-color text-base leading-relaxed"
-            >
+            </p>
+            <h1 className="text-center my-2 text-body-color text-base leading-relaxed">
               Don&apos;t be a stranger connect with me online.
-            </motion.h1>
-            <motion.div
-              initial={{ x: 500, opacity: 0, scale: 1.5 }}
-              whileInView={{ x: 0, opacity: 1, scale: 1 }}
-              transition={{ duration: 2.0 }}
-              className="flex items-center justify-center space-x-6 my-2"
-            >
+            </h1>
+            <div className="flex items-center justify-center space-x-6 my-2">
               <Link href="https://github.com/DevHumbleChris">
                 <a className="cursor-pointer">
                   <svg
@@ -185,7 +149,7 @@ export default function About() {
                   </svg>
                 </a>
               </Link>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>

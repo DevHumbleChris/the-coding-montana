@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Typewriter from "typewriter-effect";
-import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
@@ -10,20 +9,10 @@ export default function Hero() {
       <div className="-mx-2 flex flex-wrap lg:justify-between">
         <div className="w-full lg:w-1/2 xl:w-6/12">
           <div className="mb-12 max-w-[570px] lg:mb-0">
-            <motion.span
-              initial={{ x: -500, opacity: 0, scale: 1.5 }}
-              whileInView={{ x: 0, opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              className="text-primary  mb-4 block text-base font-semibold uppercase"
-            >
+            <span className="text-primary  mb-4 block text-base font-semibold uppercase">
               Aye, Aye captain!
-            </motion.span>
-            <motion.h2
-              initial={{ x: -500, opacity: 0, scale: 1.5 }}
-              whileInView={{ x: 0, opacity: 1, scale: 1 }}
-              transition={{ duration: 0.9 }}
-              className="text-dark mb-6 text-[32px] font-bold sm:text-[40px] lg:text-[36px] xl:text-[40px]"
-            >
+            </span>
+            <h2 className="text-dark mb-6 text-[32px] font-bold sm:text-[40px] lg:text-[36px] xl:text-[40px]">
               <span>Hey 👋, I&apos;m a</span>
               <div className="text-primary">
                 <Typewriter
@@ -40,23 +29,13 @@ export default function Hero() {
                   }}
                 />
               </div>
-            </motion.h2>
-            <motion.p
-              initial={{ x: -500, opacity: 0, scale: 1.5 }}
-              whileInView={{ x: 0, opacity: 1, scale: 1 }}
-              transition={{ duration: 1.2 }}
-              className="text-body-color mb-9 text-base leading-relaxed"
-            >
+            </h2>
+            <p className="text-body-color mb-9 text-base leading-relaxed">
               Am Christopher Odhiambo a tech and code enthuast from Mombasa,
               Kenya. Who enjoys the challenge of creating complex applications
               and experiences that are interactive, informative and accessible.
-            </motion.p>
-            <motion.ul
-              initial={{ x: -500, opacity: 0, scale: 1.5 }}
-              whileInView={{ x: 0, opacity: 1, scale: 1 }}
-              transition={{ duration: 1.5 }}
-              className="flex flex-wrap items-center"
-            >
+            </p>
+            <ul className="flex flex-wrap items-center">
               <li>
                 <Link href="/docs">
                   <a className="bg-primary inline-flex items-center justify-center rounded-lg py-4 px-6 text-center text-base font-normal text-white hover:bg-opacity-90 sm:px-10 lg:px-8 xl:px-10 uppercase">
@@ -75,30 +54,21 @@ export default function Hero() {
                   </span>
                 </p>
               </li>
-            </motion.ul>
+            </ul>
           </div>
         </div>
         <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
           <div className="relative rounded-lg p-8 sm:p-6">
-            <motion.div
-              initial={{ x: 500, opacity: 0, scale: 1.5 }}
-              whileInView={{ x: 0, opacity: 1, scale: 1 }}
-              transition={{ duration: 1.0 }}
-            >
-              <Image
-                alt="montana-profile"
-                src="/images/montana.jpeg"
-                height={400}
-                width={400}
-                className="rounded-b-full rounded-tl-full"
-              />
-            </motion.div>
+            <Image
+              alt="montana-profile"
+              src="/images/montana.jpeg"
+              height={400}
+              width={400}
+              className="rounded-b-full rounded-tl-full"
+            />
             <div>
-              <span className="absolute left-0 top-0 z-10 animate-bounce">
-                <motion.svg
-                  initial={{ x: 500, opacity: 0, scale: 1.5 }}
-                  whileInView={{ x: 0, opacity: 1, scale: 1 }}
-                  transition={{ duration: 1.0 }}
+              <span className="absolute left-0 top-0 z-10">
+                <svg
                   width="107"
                   height="134"
                   viewBox="0 0 107 134"
@@ -665,9 +635,9 @@ export default function Hero() {
                     transform="rotate(180 2.66536 1.66665)"
                     fill="#13C296"
                   />
-                </motion.svg>
+                </svg>
               </span>
-              <span className="absolute right-2 sm:right-24 bottom-3 z-10 animate-bounce">
+              <span className="absolute right-2 sm:right-24 bottom-3 z-10">
                 <svg
                   width="107"
                   height="134"
