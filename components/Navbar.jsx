@@ -3,6 +3,7 @@ import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const navigation = [
   { name: "About", href: "#about" },
@@ -22,7 +23,12 @@ export default function Navbar() {
               className="relative flex items-center justify-between sm:h-10"
               aria-label="Global"
             >
-              <div className="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
+              <motion.div
+                initial={{ x: -500, opacity: 0, scale: 1.5 }}
+                animate={{ x: 0, opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0"
+              >
                 <div className="flex w-full items-center justify-between md:w-auto">
                   <Link href="/">
                     <a className="flex items-center">
@@ -47,8 +53,13 @@ export default function Navbar() {
                     </Popover.Button>
                   </div>
                 </div>
-              </div>
-              <div className="hidden justify-end md:ml-10 md:block md:space-x-8 md:pr-4">
+              </motion.div>
+              <motion.div
+                initial={{ x: 500, opacity: 0, scale: 1.5 }}
+                animate={{ x: 0, opacity: 1, scale: 1 }}
+                transition={{ duration: 1.2 }}
+                className="hidden justify-end md:ml-10 md:block md:space-x-8 md:pr-4"
+              >
                 {navigation.map((item) => (
                   <Link key={item.name} href={item.href}>
                     <a className="font-medium text-gray-500 hover:text-primary">
@@ -56,7 +67,7 @@ export default function Navbar() {
                     </a>
                   </Link>
                 ))}
-              </div>
+              </motion.div>
             </nav>
           </div>
 
