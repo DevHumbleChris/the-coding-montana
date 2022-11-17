@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <div className="container mx-auto my-6 lg:my-16 overflow-hidden">
+    <div className="container mx-auto my-6 overflow-hidden">
       <div className="-mx-2 flex flex-wrap lg:justify-between">
         <div className="w-full lg:w-1/2 xl:w-6/12">
           <div className="mb-12 max-w-[570px] lg:mb-0">
