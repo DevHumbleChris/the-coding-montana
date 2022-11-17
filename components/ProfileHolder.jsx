@@ -1,12 +1,8 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 function ProfileHolder() {
   return (
-    <motion.svg
-      initial={{ x: -500, opacity: 0, scale: 1.5 }}
-      whileInView={{ x: 0, opacity: 1, scale: 1 }}
-      transition={{ duration: 1.0 }}
+    <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       x="0"
@@ -9502,7 +9498,7 @@ function ProfileHolder() {
           </g>
         </g>
       </g>
-    </motion.svg>
+    </svg>
   );
 }
 
