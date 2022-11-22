@@ -10,6 +10,9 @@ export const authOptions = {
       credentials: {},
       async authorize(credentials, req) {
         try {
+          const client = await clientPromise;
+          const db = client.db("coding-montana");
+          console.log(db);
           return null;
         } catch (err) {
           throw new Error(err.message);
