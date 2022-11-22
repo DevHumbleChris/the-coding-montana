@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { signIn } from "next-auth/react";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Example() {
   const [email, setEmail] = useState("");
@@ -11,7 +12,7 @@ export default function Example() {
     const response = await signIn("credentials", {
       email,
       password,
-      redirect: false
+      redirect: false,
     });
     console.log(response);
   };
@@ -22,12 +23,21 @@ export default function Example() {
         <meta name="description" content="The Coding Montana - Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="relative py-16">
+      <div className="relative py-4">
         <div className="container relative m-auto px-6 text-gray-500 md:px-12 xl:px-40">
           <div className="m-auto space-y-6 md:w-8/12 lg:w-6/12 xl:w-6/12">
             <div className="rounded-3xl border border-gray-100 bg-white shadow-2xl shadow-gray-600/10 backdrop-blur-2xl">
-              <div className="p-8 py-12 sm:p-16">
-                <h2 className="mb-8 text-2xl font-bold text-gray-800">
+              <div className="p-8 py-3 sm:p-6">
+                <div className="w-60 h-60 mx-auto">
+                  <Image
+                    src="/images/the-coding-montana.png"
+                    layout="responsive"
+                    height={1080}
+                    width={1080}
+                    alt="the-coding-montana"
+                  />
+                </div>
+                <h2 className="mb-8 text-2xl text-center font-bold text-gray-800">
                   Sign in to your account
                 </h2>
                 <form action="" className="space-y-8">
