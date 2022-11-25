@@ -18,7 +18,8 @@ export const authOptions = {
             .findOne({ email: req.body.email })
 
           // * Check if Password Matches
-          const isPasswordCorrect = await bcrypt.hash(req.body.password)
+          const isPasswordCorrect = await bcrypt.compare(req.body.password, user.password)
+          console.log(isPasswordCorrect, req.body.password)
           if(!isPasswordCorrect) throw new Error("Incorrect Admin User Password");
           if (!user) throw new Error("Unauthorized Admin User");
           if (user.role !== "ADMIN") throw new Error("Unauthorized Admin User");

@@ -21,7 +21,7 @@ export default function Example() {
         <meta name="description" content="The Coding Montana - Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="relative py-4">
+      <div className="relative py-12 sm:py-4">
         <div className="container relative m-auto px-6 text-gray-500 md:px-12 xl:px-40">
           <div className="m-auto space-y-6 md:w-8/12 lg:w-6/12 xl:w-6/12">
             <div className="rounded-3xl border border-gray-100 bg-white shadow-2xl shadow-gray-600/10 backdrop-blur-2xl">
@@ -41,7 +41,7 @@ export default function Example() {
                 <form onSubmit={handleSubmit} className="space-y-8">
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-gray-60">
-                      Username
+                      Email
                     </label>
                     <input
                       type="email"

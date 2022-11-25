@@ -1,13 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import Head from "next/head";
 import { useRouter } from "next/router";
-import AdminHeader from "../../components/AdminHeader";
 import Dashboard from "../../components/Dashboard";
 import { useEffect, useState } from "react";
 import Projects from "../../components/Projects";
 import Articles from "../../components/Articles";
 import Tasks from "../../components/Tasks";
-import { getSession } from "next-auth/react";
+import { getSession, signOut } from "next-auth/react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -45,6 +44,9 @@ export default function Admin() {
     }
   }, [router]);
   const cmp = components.find((cmp) => cmp.slug === currentPath);
+  const logOut = () => {
+    signOut()
+  }
   return (
     <div>
       <Head>
@@ -198,7 +200,7 @@ export default function Admin() {
           </div>
 
           <div className="-mx-6 flex items-center justify-between border-t px-6 pt-4">
-            <button className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
+            <button onClick={logOut} className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
