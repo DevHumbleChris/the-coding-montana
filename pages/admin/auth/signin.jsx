@@ -10,7 +10,7 @@ export default function Example() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await signIn("credentials", {
-      username,
+      email,
       password,
     });
   };

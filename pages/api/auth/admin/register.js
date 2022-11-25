@@ -1,5 +1,6 @@
 import clientPromise from "../../../../lib/mongodb";
 import { adminRegister } from "../../../../lib/validation";
+import bcrypt from "bcrypt";
 
 export default async function handler(req, res) {
   try {
@@ -10,10 +11,10 @@ export default async function handler(req, res) {
     const { error } = adminRegister(req.body);
 
     // * Check if user exists.
-    const user = await db.collection("user").find({}).toArray();
+    const user = await db.collection("user").findOne({ email: req.body.email });
     if (user)
-      return res.status(403).json({
-        code: 403,
+      return res.status(401).json({
+        code: 401,
         mesage: "User Exists In The Database, Try Login!",
       });
 
@@ -25,13 +26,22 @@ export default async function handler(req, res) {
 
     switch (req.method) {
       case "POST":
-        const results = await db.collection("user").insertOne({
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(req.body.password, salt);
+        await db.collection("user").insertOne({
           name: req.body.name,
           email: req.body.email,
           role: req.body.role,
+          password: hashedPassword,
         });
         return res.json({
-          message: results,
+          message: "User Created Successfully",
+          user: {
+            name: req.body.name,
+            email: req.body.email,
+            role: req.body.role,
+            password: hashedPassword,
+          },
         });
       case "GET":
         return res.json({
@@ -46,8 +56,8 @@ export default async function handler(req, res) {
           message: req.body,
         });
       default:
-        return res.status(400).json({
-          code: 400,
+        return res.status(405).json({
+          code: 405,
           message: "Wrong Requested Method",
         });
     }
