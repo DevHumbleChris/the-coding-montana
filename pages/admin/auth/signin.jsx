@@ -40,7 +40,7 @@ export default function Example() {
                 <h2 className="mb-8 text-2xl text-center font-bold text-gray-800">
                   Sign in to your account
                 </h2>
-                <form action="" className="space-y-8">
+                <form onSubmit={handleSubmit} className="space-y-8">
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-gray-60">
                       Email
@@ -75,7 +75,6 @@ export default function Example() {
 
                   <button
                     type="submit"
-                    onClick={handleSubmit}
                     className="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"
                   >
                     <span className="relative text-base font-semibold text-white">
