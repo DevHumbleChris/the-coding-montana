@@ -4,17 +4,15 @@ import { useState } from "react";
 import Image from "next/image";
 
 export default function Example() {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await signIn("credentials", {
-      email,
-      password,
-      redirect: false,
+    await signIn("credentials", {
+      username,
+      password
     });
-    console.log(response);
   };
   return (
     <>
@@ -43,15 +41,15 @@ export default function Example() {
                 <form onSubmit={handleSubmit} className="space-y-8">
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-gray-60">
-                      Email
+                      Username
                     </label>
                     <input
                       type="email"
                       name="email"
                       id="email"
-                      value={email}
+                      value={username}
                       required
-                      onChange={(e) => setEmail(e.target.value)}
+                      onChange={(e) => setUsername(e.target.value)}
                       className="focus:outline-none block w-full rounded-md border border-gray-200 bg-transparent px-4 py-3 text-gray-600 transition duration-300 focus:ring-2 focus:ring-cyan-300"
                     />
                   </div>
