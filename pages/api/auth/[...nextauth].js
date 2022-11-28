@@ -32,11 +32,13 @@ export const authOptions = {
   ],
   callbacks: {
     async redirect({ url, baseUrl }) {
+      console.log(url, baseUrl)
       return url.startsWith(baseUrl)
         ? Promise.resolve(`${baseUrl}/admin/dashboard`)
         : Promise.resolve(url);
     },
     async jwt({ token, user, account, profile, isNewUser }) {
+      console.log(token, user)
       if (user) {
         token.id = user._id;
         token.role = user.role;
@@ -44,6 +46,7 @@ export const authOptions = {
       return token;
     },
     async session({ session, token, user }) {
+      console.log(token, user)
       const sess = {
         ...session,
         user: {
