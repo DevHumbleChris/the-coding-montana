@@ -33,8 +33,8 @@ export const authOptions = {
   callbacks: {
     async redirect({ url, baseUrl }) {
       return url.startsWith(baseUrl)
-        ? Promise.resolve(url)
-        : Promise.resolve(baseUrl);
+        ? Promise.resolve(`${baseUrl}/admin/dashboard`)
+        : Promise.resolve(url);
     },
     async jwt({ token, user, account, profile, isNewUser }) {
       if (user) {
