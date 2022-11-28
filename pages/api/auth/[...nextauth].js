@@ -70,8 +70,7 @@ export const authOptions = {
     secret: process.env.NEXTAUTH_SECRET,
     encode: async ({ secret, token }) => {
       return jwt.sign({ ...token, userId: token.id }, secret, {
-        algorithm: "HS256",
-        expiresIn: 30 * 24 * 60 * 60, // 30 days
+        algorithm: "HS256"
       })
     },
     decode: async ({ secret, token }) => {
