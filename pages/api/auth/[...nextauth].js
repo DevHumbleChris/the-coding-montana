@@ -66,8 +66,16 @@ export const authOptions = {
     strategy: "jwt",
   },
   jwt: {
-    secret: process.env.JWT_SECRET,
-    maxAge: 30 * 24 * 30 * 60, // 30 days
+    secret: process.env.NEXTAUTH_SECRET,
+    encode: async ({ secret, token }) => {
+      return jwt.sign({ ...token, userId: token.id }, secret, {
+        algorithm: "HS256",
+        expiresIn: 30 * 24 * 60 * 60, // 30 days
+      })
+    },
+    decode: async ({ secret, token }) => {
+      return jwt.verify(token, secret, { algorithms: ["HS256"] })
+    },
   },
 };
 
