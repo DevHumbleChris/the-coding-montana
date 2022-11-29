@@ -2,7 +2,8 @@ import "../styles/globals.css";
 import Layout from "../components/Layout";
 import { store } from "../store";
 import { Provider } from "react-redux";
-import { SessionProvider } from 'next-auth/react'
+import { SessionProvider } from "next-auth/react";
+import "@tremor/react/dist/esm/tremor.css";
 
 function MyApp({ Component, session, pageProps }) {
   return (
