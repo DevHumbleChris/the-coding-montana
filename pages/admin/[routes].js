@@ -11,9 +11,8 @@ import GitHub from "../../components/GitHub";
 import { getSession, signOut } from "next-auth/react";
 import Link from "next/link";
 import Image from "next/image";
-import StoreNav from "../../components/StoreNav";
 import { Dialog, Transition } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function Admin() {
   const [open, setOpen] = useState(false);
@@ -584,17 +583,17 @@ export default function Admin() {
   );
 }
 
-export const getServerSideProps = async (ctx) => {
-  const session = await getSession(ctx);
-  if (!session)
-    return {
-      redirect: {
-        destination: "/admin/auth/signin",
-      },
-    };
-  return {
-    props: {
-      session,
-    },
-  };
-};
+// export const getServerSideProps = async (ctx) => {
+//   const session = await getSession(ctx);
+//   if (!session)
+//     return {
+//       redirect: {
+//         destination: "/admin/auth/signin",
+//       },
+//     };
+//   return {
+//     props: {
+//       session,
+//     },
+//   };
+// };
