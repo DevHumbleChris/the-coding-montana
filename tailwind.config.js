@@ -13,6 +13,7 @@ module.exports = {
   },
   plugins: [
     require("tailgrids/plugin"),
-    require('@tailwindcss/forms')
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio')
   ],
 };
