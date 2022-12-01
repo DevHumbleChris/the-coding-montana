@@ -573,9 +573,8 @@ export default function Admin() {
           </div>
 
           <div className="px-6 pt-6 2xl:container">
-            <div className="border-2 border-dashed border-gray-300">
-              <div>{cmp && cmp.component}</div>
-            </div>
+            <h1 className="my-2">👋Welcome Coding Montana ✌️😎</h1>
+            {cmp && cmp.component}
           </div>
         </div>
       </main>
@@ -583,17 +582,17 @@ export default function Admin() {
   );
 }
 
-// export const getServerSideProps = async (ctx) => {
-//   const session = await getSession(ctx);
-//   if (!session)
-//     return {
-//       redirect: {
-//         destination: "/admin/auth/signin",
-//       },
-//     };
-//   return {
-//     props: {
-//       session,
-//     },
-//   };
-// };
+export const getServerSideProps = async (ctx) => {
+  const session = await getSession(ctx);
+  if (!session)
+    return {
+      redirect: {
+        destination: "/admin/auth/signin",
+      },
+    };
+  return {
+    props: {
+      session,
+    },
+  };
+};

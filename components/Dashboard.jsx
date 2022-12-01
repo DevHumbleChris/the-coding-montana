@@ -1,7 +1,9 @@
-import React from 'react'
+import { Card, Metric, Text } from "@tremor/react";
 
 export default function Dashboard() {
   return (
-    <div>Dashboard</div>
-  )
+    <section>
+
+    </section>
+  );
 }
