@@ -124,8 +124,8 @@ export default function Projects() {
               {projects.map(
                 (project) =>
                   project.projectType === selected && (
-                    <div key={project.id} className="flex flex-col sm:flex-row space-x-2 max-w-full shadow-md p-2 rounded-xl">
-                      <div className="w-80 h-60">
+                    <div key={project.id} className="flex flex-col items-center justify-center sm:flex-row space-x-2 max-w-full shadow-md p-2 rounded-xl">
+                      <div className="w-40 h-40 sm:w-80 sm:h-60">
                         <Image
                           src={project.imageUrl}
                           layout="responsive"
