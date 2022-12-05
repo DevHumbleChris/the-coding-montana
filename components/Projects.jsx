@@ -120,7 +120,7 @@ export default function Projects() {
                 </h4>
               </div>
             </div>
-            <div className="flex space-x-2 p-2 col-span-3">
+            <div className="flex flex-col sm:flex-row space-x-2 p-2 col-span-3">
               {projects.map(
                 (project) =>
                   project.projectType === selected && (
