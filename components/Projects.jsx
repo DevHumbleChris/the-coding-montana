@@ -120,11 +120,11 @@ export default function Projects() {
                 </h4>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row space-x-2 p-2 col-span-3">
+            <div className="flex space-x-2 p-2 col-span-3">
               {projects.map(
                 (project) =>
                   project.projectType === selected && (
-                    <div key={project.id} className="flex space-x-2 max-w-full shadow-md p-2 rounded-xl">
+                    <div key={project.id} className="flex flex-col sm:flex-row space-x-2 max-w-full shadow-md p-2 rounded-xl">
                       <div className="w-80 h-60">
                         <Image
                           src={project.imageUrl}
