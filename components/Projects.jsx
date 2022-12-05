@@ -120,23 +120,46 @@ export default function Projects() {
                 </h4>
               </div>
             </div>
-            <div className="col-span-3">
-              {projects.map((project) => (
-                <div key={project.id}>
-                  <div className="w-24 h-24">
-                    <Image
-                      src={project.imageUrl}
-                      layout="responsive"
-                      height={1080}
-                      width={1080}
-                      alt="the-coding-montana"
-                    />
-                  </div>
-                  <div>
-                    <h1>{project.title}</h1>
-                  </div>
-                </div>
-              ))}
+            <div className="flex space-x-2 p-2 col-span-3">
+              {projects.map(
+                (project) =>
+                  project.projectType === selected && (
+                    <div key={project.id} className="flex space-x-2 max-w-full shadow-md p-2 rounded-xl">
+                      <div className="w-80 h-60">
+                        <Image
+                          src={project.imageUrl}
+                          layout="responsive"
+                          height={1080}
+                          width={1080}
+                          alt="the-coding-montana"
+                          className="rounded-xl p-2"
+                        />
+                      </div>
+                      <div className="w-full">
+                        <h1 className="text-lg">{project.title}</h1>
+                        <p className="text-md">
+                          <h2>
+                            Technologies Used:{" "}
+                            {project.technologiesUsed.map((tech, index) => (
+                              <span key={index} className="mx-1 text-primary">
+                                {tech}
+                                {index === tech.length - 1 ? "." : ","}
+                                {console.log(index, tech.length)}
+                              </span>
+                            ))}
+                          </h2>
+                          <ul>
+                            {project.projectInfo.map((info, index) => (
+                              <li key={index}>
+                                {info}
+                              </li>
+                            ))}
+                          </ul>
+                        </p>
+                      </div>
+                    </div>
+                  )
+              )}
             </div>
           </div>
         </div>

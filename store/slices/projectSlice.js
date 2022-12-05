@@ -16,7 +16,8 @@ export const projectSlice = createSlice({
                 technologiesUsed: [
                     'JavaScript', 'HTML5', 'CSS3'
                 ],
-                imageUrl: 'https://res.cloudinary.com/montana-inc/image/upload/v1670243528/Screenshot_2022-12-05_153121_g9nonz.png'
+                imageUrl: 'https://res.cloudinary.com/montana-inc/image/upload/v1670243528/Screenshot_2022-12-05_153121_g9nonz.png',
+                projectType: 'JavaScript'
             }
         ]
     }
