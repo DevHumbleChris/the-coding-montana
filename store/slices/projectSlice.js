@@ -48,6 +48,15 @@ export const projectSlice = createSlice({
                 imageUrl: 'https://res.cloudinary.com/montana-inc/image/upload/v1645424234/doimwigrjvcq0mucrcue.jpg',
                 projectType: 'Vue',
                 projectInfo: 'Poll App Made With Vue Framework and TailwindCSS.'
+            },
+            {
+                id: 4,
+                title:  'The Alumni Foundation',
+                websiteUrl: 'http://the-alumni-foundation.vercel.app/',
+                githubRepo: 'https://github.com/DevHumbleChris/vue-the-alumni-foundation.git',
+                imageUrl: 'https://res.cloudinary.com/montana-inc/image/upload/v1670338031/Screenshot_2022-12-06_174653_xbonug.png',
+                projectType: 'Vue',
+                projectInfo: 'The Alumni Foundation is proposed prototype platform that brings together both the students and the alumni.'
             }
         ]
     }
