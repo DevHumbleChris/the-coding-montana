@@ -203,10 +203,10 @@ export default function Projects() {
                     </a>
                     <div class="flex-1 px-4 py-5 sm:p-6">
                       <a href="#" title="" class="">
-                        <p class="text-lg font-bold text-gray-900">
+                        <p class="text-md font-bold text-gray-900">
                           {project.title}
                         </p>
-                        <p class="text-md">{project.projectInfo}</p>
+                        <p class="text-md hidden sm:block">{project.projectInfo}</p>
                       </a>
                     </div>
                     <div class="px-4 py-5 mt-auto border-t border-gray-100 sm:px-6">

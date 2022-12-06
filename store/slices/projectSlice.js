@@ -23,7 +23,7 @@ export const projectSlice = createSlice({
                 projectInfo: 'Trouvaille is an app that lets you book for a hotel and also helps to add hotels in a wishlist.'
             },
             {
-                id: 1,
+                id: 2,
                 title:  'The Coding Montana',
                 websiteUrl: 'https://the-coding-montana.vercel.app',
                 githubRepo: 'https://github.com/DevHumbleChris/the-coding-montana.git',
@@ -32,7 +32,7 @@ export const projectSlice = createSlice({
                 projectInfo: 'My personal portfolio built with NextJS and TailwindCSS.'
             },
             {
-                id: 2,
+                id: 3,
                 title:  'C-13 Hackathon',
                 websiteUrl: 'http://c-13-payment.vercel.app/',
                 githubRepo: 'https://github.com/DevHumbleChris/c-13-payment.git',
@@ -41,7 +41,7 @@ export const projectSlice = createSlice({
                 projectInfo: 'Group C-13 Hackathon - LIPA NA MPESA Payment Integration.'
             },
             {
-                id: 3,
+                id: 4,
                 title:  'Vue Poll App',
                 websiteUrl: 'https://vue-poll-app.web.app/',
                 githubRepo: 'https://github.com/DevHumbleChris/vue-poll-app.git',
@@ -50,7 +50,7 @@ export const projectSlice = createSlice({
                 projectInfo: 'Poll App Made With Vue Framework and TailwindCSS.'
             },
             {
-                id: 4,
+                id: 5,
                 title:  'The Alumni Foundation',
                 websiteUrl: 'http://the-alumni-foundation.vercel.app/',
                 githubRepo: 'https://github.com/DevHumbleChris/vue-the-alumni-foundation.git',
