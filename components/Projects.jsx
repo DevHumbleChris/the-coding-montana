@@ -136,23 +136,23 @@ export default function Projects() {
                             layout="fill"
                           />
                         </a>
-                        <div class="flex-1 px-4 py-5 sm:p-6">
+                        <div className="flex-1 px-4 py-5 sm:p-6">
                           <a href="#" title="" class="">
-                            <p class="text-lg font-bold text-gray-900">
+                            <p className="text-lg font-bold text-gray-900">
                               {project.title}
                             </p>
-                            <p class="text-md">{project.projectInfo}</p>
+                            <p className="text-md">{project.projectInfo}</p>
                           </a>
                         </div>
-                        <div class="px-4 py-5 mt-auto border-t border-gray-100 sm:px-6">
-                          <div class="flex items-center justify-between">
+                        <div className="px-4 py-5 mt-auto border-t border-gray-100 sm:px-6">
+                          <div className="flex items-center justify-between">
                             <Link href={project.githubRepo}>
                               <a
                                 className="flex space-x-1 items-center"
                                 role="button"
                               >
                                 <svg
-                                  class="w-5 h-5 text-gray-300 transition-all duration-200 group-hover:text-gray-900"
+                                  className="w-5 h-5 text-gray-300 transition-all duration-200 group-hover:text-gray-900"
                                   xmlns="http://www.w3.org/2000/svg"
                                   viewBox="0 0 480 512"
                                 >
@@ -167,7 +167,7 @@ export default function Projects() {
                                 role="button"
                               >
                                 <svg
-                                  class="w-5 h-5 text-gray-300 transition-all duration-200 group-hover:text-gray-900"
+                                  className="w-5 h-5 text-gray-300 transition-all duration-200 group-hover:text-gray-900"
                                   xmlns="http://www.w3.org/2000/svg"
                                   viewBox="0 0 640 512"
                                 >
@@ -201,23 +201,23 @@ export default function Projects() {
                         layout="fill"
                       />
                     </a>
-                    <div class="flex-1 px-4 py-5 sm:p-6">
-                      <a href="#" title="" class="">
-                        <p class="text-md font-bold text-gray-900">
+                    <div className="flex-1 px-4 py-5 sm:p-6">
+                      <a>
+                        <p className="text-md font-bold text-gray-900">
                           {project.title}
                         </p>
-                        <p class="text-md hidden sm:block">{project.projectInfo}</p>
+                        <p className="text-md hidden sm:block">{project.projectInfo}</p>
                       </a>
                     </div>
-                    <div class="px-4 py-5 mt-auto border-t border-gray-100 sm:px-6">
-                      <div class="flex items-center justify-between">
+                    <div className="px-4 py-5 mt-auto border-t border-gray-100 sm:px-6">
+                      <div className="flex items-center justify-between">
                         <Link href={project.githubRepo}>
                           <a
                             className="flex space-x-1 items-center"
                             role="button"
                           >
                             <svg
-                              class="w-5 h-5 text-gray-300 transition-all duration-200 group-hover:text-gray-900"
+                              className="w-5 h-5 text-gray-300 transition-all duration-200 group-hover:text-gray-900"
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 480 512"
                             >
@@ -232,7 +232,7 @@ export default function Projects() {
                             role="button"
                           >
                             <svg
-                              class="w-5 h-5 text-gray-300 transition-all duration-200 group-hover:text-gray-900"
+                              className="w-5 h-5 text-gray-300 transition-all duration-200 group-hover:text-gray-900"
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 640 512"
                             >
