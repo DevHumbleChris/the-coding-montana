@@ -138,7 +138,7 @@ export default function Projects() {
                         </a>
                         <div className="flex-1 px-4 py-5 sm:p-6">
                           <a href="#" title="" class="">
-                            <p className="text-lg font-bold text-gray-900">
+                            <p className="text-md font-bold text-gray-900">
                               {project.title}
                             </p>
                             <p className="text-md hidden sm:block">{project.projectInfo}</p>
