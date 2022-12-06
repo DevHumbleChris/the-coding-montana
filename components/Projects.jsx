@@ -113,7 +113,7 @@ export default function Projects() {
             </div>
           </div>
           <div className="">
-            <div className="flex space-x-2 p-2 col-span-3 shrink-0 overflow-x-hidden">
+            <div className="flex space-x-2 p-2 col-span-3 shrink-0 overflow-x-scroll scrollbar-hide">
               {selected !== "All" &&
                 projects.map(
                   (project) =>
