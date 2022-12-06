@@ -141,7 +141,7 @@ export default function Projects() {
                             <p className="text-lg font-bold text-gray-900">
                               {project.title}
                             </p>
-                            <p className="text-md">{project.projectInfo}</p>
+                            <p className="text-md hidden sm:block">{project.projectInfo}</p>
                           </a>
                         </div>
                         <div className="px-4 py-5 mt-auto border-t border-gray-100 sm:px-6">
