@@ -19,10 +19,8 @@ export default function Hero() {
                   options={{
                     strings: [
                       "Fullstack Web Developer.",
-                      "React Native Developer.",
-                      "Graphic Designer.",
-                      "IT Technician.",
-                      "IT Consultant.",
+                      "UI/UX Designer.",
+                      "IT Technician."
                     ],
                     autoStart: true,
                     loop: true,
