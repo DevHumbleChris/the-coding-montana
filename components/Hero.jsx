@@ -35,7 +35,7 @@ export default function Hero() {
             </p>
             <ul className="flex flex-wrap items-center">
               <li>
-                <Link href="/docs">
+                <Link href="mailto:christopherodhiambo254@gmail.com">
                   <a className="bg-primary inline-flex items-center justify-center rounded-lg py-4 px-6 text-center text-base font-normal text-white hover:bg-opacity-90 sm:px-10 lg:px-8 xl:px-10 uppercase">
                     Hire me
                   </a>
