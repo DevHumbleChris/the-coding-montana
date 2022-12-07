@@ -1,22 +1,45 @@
 import Link from "next/link";
 import { useState } from "react";
+import { Comment } from "react-loader-spinner";
 
 export default function Contacts() {
-    const [visitor, setVisitor] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
+  const [visitor, setVisitor] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [isSendMessage, setIsSendingMessage] = useState(false);
+  console.log(isSendMessage);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    fetch("/api/sendmail", {
+      method: "POST", // or 'PUT'
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(visitor),
     })
-    const handleSubmit = (e) => {
-        e.preventDefault()
-    }
-    const handleOnChange = (e) => {
+      .then((data) => data.json())
+      .then((response) => {
+        setIsSendingMessage(true);
+        setTimeout(() => {
+          setIsSendingMessage(false);
+        }, 2000);
         setVisitor({
-            ...visitor,
-            [e.target.name]: e.target.value
-        })
-    }
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      });
+  };
+  const handleOnChange = (e) => {
+    setVisitor({
+      ...visitor,
+      [e.target.name]: e.target.value,
+    });
+  };
   return (
     <section className="py-10 bg-gray-100 sm:py-16 lg:py-24">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
@@ -70,8 +93,14 @@ export default function Contacts() {
             </div>
           </div>
 
-          <div className="mt-6 overflow-hidden bg-white rounded-xl">
-            <div className="px-6 py-12 sm:p-12">
+          <div className="relative mt-6 overflow-hidden bg-white rounded-xl">
+            <div
+              className={
+                isSendMessage
+                  ? "px-6 py-12 sm:p-12 opacity-25"
+                  : "px-6 py-12 sm:p-12"
+              }
+            >
               <h3 className="text-3xl font-semibold text-center text-gray-900">
                 Send me a message.
               </h3>
@@ -165,6 +194,7 @@ export default function Contacts() {
                     <button
                       type="submit"
                       className="inline-flex items-center justify-center w-full px-4 py-4 mt-2 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md focus:outline-none hover:bg-blue-700 focus:bg-blue-700"
+                      disabled={isSendMessage}
                     >
                       Send
                     </button>
@@ -172,6 +202,21 @@ export default function Contacts() {
                 </div>
               </form>
             </div>
+            {isSendMessage && (
+              <div className="absolute top-60 left-[35%] sm:left-[45%]">
+                <Comment
+                  visible={true}
+                  height="120"
+                  width="120"
+                  ariaLabel="comment-loading"
+                  wrapperStyle={{}}
+                  wrapperClass="comment-wrapper"
+                  color="#fff"
+                  backgroundColor="#0011ff"
+                />
+                <p className="text-primary">Sending Message</p>
+              </div>
+            )}
           </div>
         </div>
       </div>
