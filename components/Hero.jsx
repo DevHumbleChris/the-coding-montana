@@ -42,15 +42,9 @@ export default function Hero() {
                 </Link>
               </li>
               <li>
-                <p className="text-body-color hover:text-primary inline-flex items-center justify-center py-4 px-6 text-center text-base font-normal sm:px-10 lg:px-8 xl:px-10">
+                <a href="/images/resume.pdf" className="text-body-color hover:text-primary inline-flex items-center justify-center py-4 px-6 text-center text-base font-normal sm:px-10 lg:px-8 xl:px-10" download>
                   Download Resume
-                  <span className="mx-2">
-                    {/* <FontAwesomeIcon
-                      icon={["fas", "chevron-right"]}
-                      className="text-primary"
-                    /> */}
-                  </span>
-                </p>
+                </a>
               </li>
             </ul>
           </div>
