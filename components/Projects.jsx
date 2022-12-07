@@ -131,8 +131,6 @@ export default function Projects() {
                             className="object-cover w-full h-full transition-all duration-200 transform group-hover:scale-110"
                             src={project.imageUrl}
                             alt={project.title}
-                            height={400}
-                            width={400}
                             layout="fill"
                           />
                         </a>
@@ -196,8 +194,6 @@ export default function Projects() {
                         className="object-cover w-full h-full transition-all duration-200 transform group-hover:scale-110"
                         src={project.imageUrl}
                         alt={project.title}
-                        height={400}
-                        width={400}
                         layout="fill"
                       />
                     </a>
