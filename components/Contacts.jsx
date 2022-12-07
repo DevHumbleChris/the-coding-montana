@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Comment } from "react-loader-spinner";
+import { toast } from 'react-toastify';
 
 export default function Contacts() {
   const [visitor, setVisitor] = useState({
@@ -10,7 +11,6 @@ export default function Contacts() {
     message: "",
   });
   const [isSendMessage, setIsSendingMessage] = useState(false);
-  console.log(isSendMessage);
   const handleSubmit = async (e) => {
     e.preventDefault();
     fetch("/api/sendmail", {
@@ -25,6 +25,7 @@ export default function Contacts() {
         setIsSendingMessage(true);
         setTimeout(() => {
           setIsSendingMessage(false);
+          toast.info('Message Sent Successfully!')
         }, 2000);
         setVisitor({
           name: "",
