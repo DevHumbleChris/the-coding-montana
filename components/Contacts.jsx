@@ -1,8 +1,22 @@
-import { LockClosedIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import React from "react";
+import { useState } from "react";
 
 export default function Contacts() {
+    const [visitor, setVisitor] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    })
+    const handleSubmit = (e) => {
+        e.preventDefault()
+    }
+    const handleOnChange = (e) => {
+        setVisitor({
+            ...visitor,
+            [e.target.name]: e.target.value
+        })
+    }
   return (
     <section className="py-10 bg-gray-100 sm:py-16 lg:py-24">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
@@ -62,11 +76,11 @@ export default function Contacts() {
                 Send me a message.
               </h3>
 
-              <form action="#" method="POST" className="mt-14">
+              <form onSubmit={handleSubmit} method="POST" className="mt-14">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-4">
                   <div>
                     <label
-                      for="visitor-name"
+                      htmlFor="visitor-name"
                       className="text-base font-medium text-gray-900"
                     >
                       Your name
@@ -74,17 +88,20 @@ export default function Contacts() {
                     <div className="mt-2.5 relative">
                       <input
                         type="text"
-                        name="visitor-name"
+                        name="name"
                         id="visitor-name"
                         placeholder="Enter your name"
+                        value={visitor.name}
+                        onChange={(e) => handleOnChange(e)}
                         className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
+                        required
                       />
                     </div>
                   </div>
 
                   <div>
                     <label
-                      for="email"
+                      htmlFor="email"
                       className="text-base font-medium text-gray-900"
                     >
                       Email Address
@@ -93,15 +110,18 @@ export default function Contacts() {
                       <input
                         type="email"
                         name="email"
+                        value={visitor.email}
+                        onChange={(e) => handleOnChange(e)}
                         id="email"
                         placeholder="e.g johndoe@example.com"
                         className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
+                        required
                       />
                     </div>
                   </div>
                   <div className="sm:col-span-2">
-                  <label
-                      for="subject"
+                    <label
+                      htmlFor="subject"
                       className="text-base font-medium text-gray-900"
                     >
                       Subject
@@ -110,16 +130,19 @@ export default function Contacts() {
                       <input
                         type="text"
                         name="subject"
+                        value={visitor.subject}
+                        onChange={(e) => handleOnChange(e)}
                         id="subject"
                         placeholder="subject"
                         className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
+                        required
                       />
                     </div>
                   </div>
 
                   <div className="sm:col-span-2">
                     <label
-                      for="message"
+                      htmlFor="message"
                       className="text-base font-medium text-gray-900"
                     >
                       Message
@@ -128,9 +151,12 @@ export default function Contacts() {
                       <textarea
                         name="message"
                         id="message"
+                        value={visitor.message}
+                        onChange={(e) => handleOnChange(e)}
                         placeholder="enter your message..."
                         className="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md resize-y focus:outline-none focus:border-blue-600 caret-blue-600"
                         rows="4"
+                        required
                       ></textarea>
                     </div>
                   </div>
