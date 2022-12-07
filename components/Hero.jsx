@@ -20,7 +20,7 @@ export default function Hero() {
                     strings: [
                       "Fullstack Web Developer.",
                       "UI/UX Designer.",
-                      "IT Technician."
+                      "IT Technician.",
                     ],
                     autoStart: true,
                     loop: true,
@@ -42,7 +42,11 @@ export default function Hero() {
                 </Link>
               </li>
               <li>
-                <a href="/images/resume.pdf" className="text-body-color hover:text-primary inline-flex items-center justify-center py-4 px-6 text-center text-base font-normal sm:px-10 lg:px-8 xl:px-10" download>
+                <a
+                  href="/images/resume.pdf"
+                  className="text-body-color hover:text-primary inline-flex items-center justify-center py-4 px-6 text-center text-base font-normal sm:px-10 lg:px-8 xl:px-10"
+                  download
+                >
                   Download Resume
                 </a>
               </li>
