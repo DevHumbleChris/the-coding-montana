@@ -29,7 +29,7 @@ export default function Hero() {
               </div>
             </h2>
             <p className="text-body-color mb-9 text-base leading-relaxed">
-              Am Christopher Odhiambo a tech and code enthuast from Mombasa,
+              Am Christopher Odhiambo a tech and code enthusiast from Mombasa,
               Kenya. Who enjoys the challenge of creating complex applications
               and experiences that are interactive, informative and accessible.
             </p>
