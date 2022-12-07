@@ -46,7 +46,7 @@ export default function Contacts() {
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl font-bold leading-tight text-primary sm:text-4xl lg:text-5xl">
-            Contact us
+            Contact Me
           </h2>
           <p className="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-500">
             If you have any questions about me or my projects, please contact
