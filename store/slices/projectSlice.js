@@ -57,6 +57,33 @@ export const projectSlice = createSlice({
                 imageUrl: 'https://res.cloudinary.com/montana-inc/image/upload/v1670338031/Screenshot_2022-12-06_174653_xbonug.png',
                 projectType: 'Vue',
                 projectInfo: 'The Alumni Foundation is proposed prototype platform that brings together both the students and the alumni.'
+            },
+            {
+                id: 6,
+                title:  'Montflix',
+                websiteUrl: 'https://montflix.cyclic.app/',
+                githubRepo: 'https://github.com/DevHumbleChris/montflix.git',
+                imageUrl: 'https://res.cloudinary.com/montanasolutions/image/upload/v1673876827/montflix_p6ypf4.png',
+                projectType: 'JavaScript',
+                projectInfo: 'More than just a movie app. Built with ExpressJS and PUG'
+            },
+            {
+                id: 7,
+                title:  'The Twitter Clone',
+                websiteUrl: 'https://the-twitter-clone-ke.vercel.app/',
+                githubRepo: 'https://github.com/DevHumbleChris/react-twitter-clone.git',
+                imageUrl: 'https://res.cloudinary.com/montanasolutions/image/upload/v1673878995/twitter-clone_bnrun2.png',
+                projectType: 'React',
+                projectInfo: 'Realtime Twitter Clone built with React and Firebase'
+            },
+            {
+                id: 8,
+                title:  'Group Chat App -React',
+                websiteUrl: 'https://montana-react-chat-app.vercel.app/',
+                githubRepo: 'https://github.com/DevHumbleChris/react-chat-app.git',
+                imageUrl: 'https://res.cloudinary.com/montanasolutions/image/upload/v1673879456/Chat_Group_App_xmdmzf.png',
+                projectType: 'React',
+                projectInfo: 'Realtime chat group app made with React, TailwindCSS and Firebase.'
             }
         ]
     }
