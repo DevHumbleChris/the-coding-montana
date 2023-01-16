@@ -18,8 +18,7 @@ export default function About() {
           <ProfileHolder />
           <div className="max-w-xl mx-auto flex flex-col">
             <p className="text-body-color mb-3 text-base leading-relaxed">
-              I started a serious coding journey almost exactly a year ago. I
-              love combining the worlds of logic and creative design to make
+              I love combining the worlds of logic and creative design to make
               eye-catching, accessible, user-friendly websites and applications.
               I offer both design and development services of web applications
               or websites!
