@@ -7,8 +7,17 @@
 @layer base {
     * {
         font-family: 'Poppins', sans-serif;
+        scrollbar-width: thin;
     }
     body {
         @apply bg-gradient-to-r from-[#fdfbfb] to-[#e2ebf0];
     }
+}
+
+.project::-webkit-scrollbar {
+    height: 10px;
+}
+.project::-webkit-scrollbar-thumb {
+    background: #28508d;
+    border-radius: 10px;
 }
