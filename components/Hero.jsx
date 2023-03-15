@@ -58,9 +58,9 @@ export default function Hero() {
             <Image
               alt="montana-profile"
               src="/images/new-montan.JPG"
-              height={400}
-              width={400}
-              className="rounded-b-full rounded-tl-full"
+              height={640}
+              width={427}
+              className="rounded-b-full rounded-tl-full object-fit"
             />
             <div>
               <span className="absolute left-0 top-0 z-10">
