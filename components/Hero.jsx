@@ -57,10 +57,10 @@ export default function Hero() {
           <div className="relative rounded-lg p-8 sm:p-6">
             <Image
               alt="montana-profile"
-              src="/images/new-montan.JPG"
-              height={640}
-              width={427}
-              className="rounded-b-full rounded-tl-full object-fit"
+              src="/images/montana.jpeg"
+              height={400}
+              width={400}
+              className="rounded-b-full rounded-tl-full"
             />
             <div>
               <span className="absolute left-0 top-0 z-10">
